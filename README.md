@@ -19,5 +19,13 @@ Backend:
   .Maven current ver
   .JPA
   .Lombok
-  
 Database: MySql
+<H3>Cài đặt</H3>
+-	Cài đặt java phiên bản 17: https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
+-	Cài đặt intellij: https://youtu.be/wPZas8c00GA?si=E50HI1gdpNDv7frj
+-	Giải nén -> import project vào intellij
+-	Cài đặt xampp server
+-	Load maven project -> load folder:
+- Khởi động chạy modul admin hoặc khách hàng.
+<H3>Thông tin đường dẫn</H3>
+
