@@ -14,21 +14,31 @@ Frontend:
   <li>JS</li>
   <li>Thymeleaf</li>
 </ul>
-
 Backend: 
-  .Springboot 3.0.12
-  .WebService MVC, RestfulAPI
-  .Java 17
-  .Maven current ver
-  .JPA
-  .Lombok
+<ul>
+  <li>Springboot 3.0.12</li>
+  <li>WebService MVC, RestfulAPI</li>
+  <li> Java 17</li>
+  <li> Maven </li>
+  <li>JPA</li>
+  <li>Lombok</li>
+  <li></li>
+</ul>
 Database: MySql
+
 <H3>Cài đặt</H3>
--	Cài đặt java phiên bản 17: https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
--	Cài đặt intellij: https://youtu.be/wPZas8c00GA?si=E50HI1gdpNDv7frj
--	Giải nén -> import project vào intellij
--	Cài đặt xampp server
--	Load maven project -> load folder:
-- Khởi động chạy modul admin hoặc khách hàng.
+<ul>
+    <li>Cài đặt java phiên bản 17: https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html</li>
+    <li>Cài đặt intellij: https://youtu.be/wPZas8c00GA?si=E50HI1gdpNDv7frj</li>
+    <li>Giải nén -> import project vào intellij</li>
+    <li>Cài đặt xampp server</li>
+    <li>Load maven project -> load folder:</li>
+    <li>Khởi động chạy modul admin hoặc khách hàng.</li>
+</ul>
+
 <H3>Thông tin đường dẫn</H3>
+<ul>
+  <ol>sd</ol>
+  <ol>fdf</ol>
+</ul>
 
