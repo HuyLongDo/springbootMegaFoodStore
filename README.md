@@ -22,7 +22,6 @@ Backend:
   <li> Maven </li>
   <li>JPA</li>
   <li>Lombok</li>
-  <li></li>
 </ul>
 Database: MySql
 
@@ -38,7 +37,11 @@ Database: MySql
 
 <H3>Thông tin đường dẫn</H3>
 <ul>
-  <ol>sd</ol>
-  <ol>fdf</ol>
+  <li>
+    dddd
+    <ul>
+      <li>sdsdsd</li>
+    </ul>
+  </li>
 </ul>
 
