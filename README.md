@@ -8,10 +8,13 @@ Còn khách hàng có 2 loại khách hàng. Khách hàng có tài khoản sẽ 
 
 <H3>Công nghệ</H3>
 Frontend: 
-  .HTML
-  .CSS
-  .JS
-  .Thymeleaf
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JS</li>
+  <li>Thymeleaf</li>
+</ul>
+
 Backend: 
   .Springboot 3.0.12
   .WebService MVC, RestfulAPI
