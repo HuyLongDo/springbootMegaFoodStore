@@ -34,14 +34,18 @@ Database: MySql
     <li>Load maven project -> load folder:</li>
     <li>Khởi động chạy modul admin hoặc khách hàng.</li>
 </ul>
+<br>
 
 <H3>Thông tin đường dẫn</H3>
 <ul>
   <li>
-    dddd
-    <ul>
-      <li>sdsdsd</li>
-    </ul>
+    Trang chủ cửa hàng
+    <ul><li>../localhost:8082/shop/</li></ul>
   </li>
 </ul>
-
+<ul>
+  <li>
+    Trang chủ admin
+    <ul><li>../localhost:8082/shop/</li></ul>
+  </li>
+</ul>
