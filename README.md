@@ -26,7 +26,7 @@ Backend:
 Database: MySql
 
 <h3>flowchart's springboot</h3>
-<img src="https://github.com/user-attachments/assets/50de7108-ee8f-40ce-9fa3-3523a3e6d45b" alt="Cant load img.." width="400" height="300" />
+<img src="https://github.com/user-attachments/assets/50de7108-ee8f-40ce-9fa3-3523a3e6d45b" alt="Cant load img.." width="400" height="200" />
 <br>
 
 <H3>Cài đặt</H3>
