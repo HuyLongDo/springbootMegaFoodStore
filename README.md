@@ -58,5 +58,5 @@ Do chưa tích hợp docker nên chỉ chạy được module hiện tại cho m
 <h3>Demo giao diện</h3>
 <ul>
   <li>Giao diện cửa hàng</li>
-  <li></li>
+  <li><img src="https://github.com/user-attachments/assets/4d0c9c1e-3131-452f-b2c6-9bf905c4f1ed"></li>
 </ul>
