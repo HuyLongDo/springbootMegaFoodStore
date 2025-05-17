@@ -26,7 +26,7 @@ Backend:
 Database: MySql
 
 <h3>flowchart's springboot</h3>
-<img src="https://github.com/user-attachments/assets/50de7108-ee8f-40ce-9fa3-3523a3e6d45b" alt="Cant load img.." width="400" heigh="300" />
+<img src="https://github.com/user-attachments/assets/50de7108-ee8f-40ce-9fa3-3523a3e6d45b" alt="Cant load img.." width="400" height="300" />
 <br>
 
 <H3>Cài đặt</H3>
@@ -57,6 +57,12 @@ Do chưa tích hợp docker nên chỉ chạy được module hiện tại cho m
 
 <h3>Demo giao diện</h3>
 <ul>
-  <li>Giao diện cửa hàng</li>
-  <li><img src="https://github.com/user-attachments/assets/4d0c9c1e-3131-452f-b2c6-9bf905c4f1ed" width="50%"  alt="Cant load img.."></li>
+  <li>Giao diện cửa hàng <br>
+  <img src="https://github.com/user-attachments/assets/4d0c9c1e-3131-452f-b2c6-9bf905c4f1ed" width="50%"  alt="Cant load img.."><br>
+  <img src="https://github.com/user-attachments/assets/2a8c209c-2ae7-41af-b3c5-1373534730b8" width="50%" alt="Cant load img.."><br>
+  <img src="https://github.com/user-attachments/assets/96fab2f7-ecd3-4c9a-a68f-9262f2ec28d8" width="50%" alt="Cant load img.."><br>
+  <img src="https://github.com/user-attachments/assets/7b2826be-89fe-48db-8656-d4ed4117b0fa" width="50%" alt="Cant load img.."><br>
+  <-img src="" width="50%" alt="Cant load img..">
+  </li>
+  <li>Giao diện admin</li>
 </ul>
