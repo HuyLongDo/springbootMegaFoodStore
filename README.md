@@ -57,13 +57,15 @@ Do chưa tích hợp docker nên chỉ chạy được module hiện tại cho m
 
 <h3>7. Demo giao diện</h3>
 <ul>
-  <li>Giao diện cửa hàng</li>
+  <li>Một số giao diện cửa hàng</li>
   <img style="margin-bottom: 100px" src="https://github.com/user-attachments/assets/4d0c9c1e-3131-452f-b2c6-9bf905c4f1ed" width="50%"  alt="Cant load img..">
   <img style="margin-bottom: 100px" src="https://github.com/user-attachments/assets/2a8c209c-2ae7-41af-b3c5-1373534730b8" width="50%"  alt="Cant load img..">
-  <img src="https://github.com/user-attachments/assets/2a8c209c-2ae7-41af-b3c5-1373534730b8" width="50%" alt="Cant load img.."><br>
-  <img src="https://github.com/user-attachments/assets/96fab2f7-ecd3-4c9a-a68f-9262f2ec28d8" width="50%" alt="Cant load img.."><br>
-  <img src="https://github.com/user-attachments/assets/7b2826be-89fe-48db-8656-d4ed4117b0fa" width="50%" alt="Cant load img.."><br>
-  <-img src="" width="50%" alt="Cant load img..">
+  <img src="https://github.com/user-attachments/assets/2a8c209c-2ae7-41af-b3c5-1373534730b8" width="50%" alt="Cant load img..">
+  <img src="https://github.com/user-attachments/assets/96fab2f7-ecd3-4c9a-a68f-9262f2ec28d8" width="50%" alt="Cant load img..">
+  <img src="https://github.com/user-attachments/assets/7b2826be-89fe-48db-8656-d4ed4117b0fa" width="50%" alt="Cant load img..">
+  <img src="https://github.com/user-attachments/assets/623cf492-e5e4-4801-871a-63af8dc720c4" width="50%" alt="Cant load img..">
+  <img src="https://github.com/user-attachments/assets/115b57d0-c2b7-4c3e-a7db-5a019da307be" width="50%" alt="Cant load img.."><br>
+  <-img src="" width="50%" alt="Cant load img.."><br>
 </ul>
 <ul>
   <li>Giao diện admin</li>
