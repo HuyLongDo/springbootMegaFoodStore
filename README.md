@@ -1,4 +1,4 @@
-<H3>1.Dự án cá nhân</H3>
+<H3>1. Dự án cá nhân</H3>
 Website cửa hàng bánh ngọt sử dụng java springboot, em chọn framework này để tìm hiểu về cách vận hành quản lý dự án, thấy được nhiều mặt thuận tiện triển khai chức năng của module và ý tưởng này có được trong quá trình thực tập doanh nghiệp yoot.
 
 <H3>2. Giới thiệu</H3>
@@ -25,11 +25,11 @@ Backend:
 </ul>
 Database: MySql
 
-<h3>flowchart's springboot</h3>
+<h3>4. Flowchart's springboot</h3>
 <img src="https://github.com/user-attachments/assets/50de7108-ee8f-40ce-9fa3-3523a3e6d45b" alt="Cant load img.." width="400" height="200" />
 <br>
 
-<H3>Cài đặt</H3>
+<H3>5. Cài đặt</H3>
 <ul>
     <li>Cài đặt java phiên bản 17: https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html</li>
     <li>Cài đặt intellij: https://youtu.be/wPZas8c00GA?si=E50HI1gdpNDv7frj</li>
@@ -40,7 +40,7 @@ Database: MySql
 </ul>
 <br>
 
-<H3>Địa chỉ máy chủ test</H3>
+<H3>6. Địa chỉ máy chủ test</H3>
 Do chưa tích hợp docker nên chỉ chạy được module hiện tại cho một loại user
 <ul>
   <li>
@@ -55,10 +55,10 @@ Do chưa tích hợp docker nên chỉ chạy được module hiện tại cho m
   </li>
 </ul>
 
-<h3>Demo giao diện</h3>
+<h3>7. Demo giao diện</h3>
 <ul>
   <li>Giao diện cửa hàng <br>
-  <img src="https://github.com/user-attachments/assets/4d0c9c1e-3131-452f-b2c6-9bf905c4f1ed" width="50%"  alt="Cant load img.."><br>
+  <img margin="20px" src="https://github.com/user-attachments/assets/4d0c9c1e-3131-452f-b2c6-9bf905c4f1ed" width="50%"  alt="Cant load img.."><br>
   <img src="https://github.com/user-attachments/assets/2a8c209c-2ae7-41af-b3c5-1373534730b8" width="50%" alt="Cant load img.."><br>
   <img src="https://github.com/user-attachments/assets/96fab2f7-ecd3-4c9a-a68f-9262f2ec28d8" width="50%" alt="Cant load img.."><br>
   <img src="https://github.com/user-attachments/assets/7b2826be-89fe-48db-8656-d4ed4117b0fa" width="50%" alt="Cant load img.."><br>
