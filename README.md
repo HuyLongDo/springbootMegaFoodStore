@@ -58,7 +58,7 @@ Do chưa tích hợp docker nên chỉ chạy được module hiện tại cho m
 <h3>7. Demo giao diện</h3>
 <ul>
   <li>Giao diện cửa hàng <br>
-  <img margin="100px" src="https://github.com/user-attachments/assets/4d0c9c1e-3131-452f-b2c6-9bf905c4f1ed" width="50%"  alt="Cant load img.."><br>
+  <img margin-bottom="100px" src="https://github.com/user-attachments/assets/4d0c9c1e-3131-452f-b2c6-9bf905c4f1ed" width="50%"  alt="Cant load img.."><br>
   <img src="https://github.com/user-attachments/assets/2a8c209c-2ae7-41af-b3c5-1373534730b8" width="50%" alt="Cant load img.."><br>
   <img src="https://github.com/user-attachments/assets/96fab2f7-ecd3-4c9a-a68f-9262f2ec28d8" width="50%" alt="Cant load img.."><br>
   <img src="https://github.com/user-attachments/assets/7b2826be-89fe-48db-8656-d4ed4117b0fa" width="50%" alt="Cant load img.."><br>
