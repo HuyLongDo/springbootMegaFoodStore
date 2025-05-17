@@ -26,7 +26,7 @@ Backend:
 Database: MySql
 
 <h3>flowchart's springboot</h3>
-<img src="https://github.com/user-attachments/assets/50de7108-ee8f-40ce-9fa3-3523a3e6d45b" width="400" heigh="300" />
+<img src="https://github.com/user-attachments/assets/50de7108-ee8f-40ce-9fa3-3523a3e6d45b" alt="Cant load img.." width="400" heigh="300" />
 <br>
 
 <H3>Cài đặt</H3>
@@ -58,5 +58,5 @@ Do chưa tích hợp docker nên chỉ chạy được module hiện tại cho m
 <h3>Demo giao diện</h3>
 <ul>
   <li>Giao diện cửa hàng</li>
-  <li><img src="https://github.com/user-attachments/assets/4d0c9c1e-3131-452f-b2c6-9bf905c4f1ed"></li>
+  <li><img src="https://github.com/user-attachments/assets/4d0c9c1e-3131-452f-b2c6-9bf905c4f1ed" width="50%"  alt="Cant load img.."></li>
 </ul>
