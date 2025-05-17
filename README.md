@@ -6,7 +6,7 @@ Về web cửa hàng bánh, đối với khách hàng là những người có n
 Cụ thể quản lý gồm có thêm, xóa, sửa các sản phẩm (bánh), danh mục,… giúp quản lý cửa hàng tiện hơn. 
 Còn khách hàng có 2 loại khách hàng. Khách hàng có tài khoản sẽ khác với khách hàng không có tài khoản ở thanh toán là khách vãng lai. Khách vãng lai có thể thêm sản phẩm vào giỏ và thanh toán . Cả 2 loại khách hàng đều được xem thông tin sản phẩm (bánh), danh mục…Sau khi họ đặt bánh nhân viên sẽ gọi điện xác nhận đơn hàng.
 
-<H3>Công nghệ</H3>
+<H3>3. Công nghệ</H3>
 Frontend: 
 <ul>
   <li>HTML</li>
@@ -26,7 +26,7 @@ Backend:
 Database: MySql
 
 <h3>flowchart's springboot</h3>
-<img src="https://github.com/user-attachments/assets/50de7108-ee8f-40ce-9fa3-3523a3e6d45b" width="300" />
+<img src="https://github.com/user-attachments/assets/50de7108-ee8f-40ce-9fa3-3523a3e6d45b" width="400" heigh="300" />
 <br>
 
 <H3>Cài đặt</H3>
