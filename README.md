@@ -1,4 +1,4 @@
-<H3>1.Dự án cá nhân</H3>
+![image](https://github.com/user-attachments/assets/3d8375c9-3b72-4456-a0b9-4476dc418357)<H3>1.Dự án cá nhân</H3>
 Website cửa hàng bánh ngọt sử dụng java springboot, em chọn framework này để tìm hiểu về cách vận hành quản lý dự án, thấy được nhiều mặt thuận tiện triển khai chức năng của module và ý tưởng này có được trong quá trình thực tập doanh nghiệp yoot.
 
 <H3>2. Giới thiệu</H3>
@@ -25,6 +25,10 @@ Backend:
 </ul>
 Database: MySql
 
+<h3>flowchart's springboot</h3>
+![image](https://github.com/user-attachments/assets/50de7108-ee8f-40ce-9fa3-3523a3e6d45b)
+<br>
+
 <H3>Cài đặt</H3>
 <ul>
     <li>Cài đặt java phiên bản 17: https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html</li>
@@ -36,7 +40,8 @@ Database: MySql
 </ul>
 <br>
 
-<H3>Thông tin đường dẫn</H3>
+<H3>Địa chỉ máy chủ test</H3>
+Do chưa tích hợp docker nên chỉ chạy được module hiện tại cho một loại user
 <ul>
   <li>
     Trang chủ cửa hàng
@@ -46,6 +51,12 @@ Database: MySql
 <ul>
   <li>
     Trang chủ admin
-    <ul><li>../localhost:8082/shop/</li></ul>
+    <ul><li>../localhost:8082/admin/</li></ul>
   </li>
+</ul>
+
+<h3>Demo giao diện</h3>
+<ul>
+  <li>Giao diện cửa hàng</li>
+  <li></li>
 </ul>
