@@ -2,10 +2,10 @@
 Website cửa hàng bánh ngọt sử dụng java springboot, mình chọn framework này vì thấy được nhiều mặt thuận tiện triển khai cả cấu trúc dự án và có ý tưởng này trong quá trình thực tập doanh nghiệp, càng tìm hiểu về cách vận hành quản lý dự án giúp cho bản thân mình định hình được các vai trò khi phát triển website.
 
 <H3>2. Giới thiệu</H3>
-Về web cửa hàng bánh, có phạm vi hoạt động cho loại cửa hàng nhỏ tư nhân, cấu trúc tổ chức dự án theo mô hình mvc web service truyền thống. Có thể tùy biến phát triển thêm chức năng theo yêu cầu của người dùng muốn mở rộng<br>
+ Về web cửa hàng bánh, có phạm vi hoạt động cho loại cửa hàng nhỏ tư nhân, cấu trúc tổ chức dự án theo mô hình mvc web service truyền thống. Có thể tùy biến phát triển thêm chức năng theo yêu cầu của người dùng muốn mở rộng.<br>
 Nghiệp vụ:<br>
-Đối với khách hàng là những người có nhu cầu mua bánh, họ có thể xem, tìm kiếm các thông tin về các loại bánh, mua và đặt hàng một cách nhanh chóng, tiện lợi không ràng buộc về thời gian hay đi lại.<br>
-Cụ thể quản lý gồm có thêm, xóa, sửa các sản phẩm (bánh), danh mục,… giúp quản lý cửa hàng tiện hơn.<br>
+ Đối với khách hàng là những người có nhu cầu mua bánh, họ có thể xem, tìm kiếm các thông tin về các loại bánh, mua và đặt hàng một cách nhanh chóng, tiện lợi không ràng buộc về thời gian hay đi lại.<br>
+ Cụ thể quản lý gồm có thêm, xóa, sửa các sản phẩm (bánh), danh mục,… giúp quản lý cửa hàng tiện hơn.<br>
 Còn khách hàng có 2 loại khách hàng. Khách hàng có tài khoản sẽ khác với khách hàng không có tài khoản ở thanh toán là khách vãng lai. Khách vãng lai có thể thêm sản phẩm vào giỏ và thanh toán . Cả 2 loại khách hàng đều được xem thông tin sản phẩm (bánh), danh mục…Sau khi họ đặt bánh nhân viên sẽ gọi điện xác nhận đơn hàng.
 
 <H3>3. Công nghệ</H3>
