@@ -59,7 +59,7 @@ Do chưa tích hợp docker nên chỉ chạy được module hiện tại cho m
 
 <h3>7. Demo giao diện</h3>
 <ul>
-  <li>Một số giao diện cửa hàng</li>
+  <li><b>Một số giao diện cửa hàng</b></li>
 </ul>
   <img style="margin-bottom: 100px" src="https://github.com/user-attachments/assets/4d0c9c1e-3131-452f-b2c6-9bf905c4f1ed" width="50%"  alt="Cant load img..">
   <img style="margin-bottom: 100px" src="https://github.com/user-attachments/assets/2a8c209c-2ae7-41af-b3c5-1373534730b8" width="50%"  alt="Cant load img..">
@@ -69,15 +69,13 @@ Do chưa tích hợp docker nên chỉ chạy được module hiện tại cho m
   <img src="https://github.com/user-attachments/assets/623cf492-e5e4-4801-871a-63af8dc720c4" width="50%" alt="Cant load img..">
   <img src="https://github.com/user-attachments/assets/115b57d0-c2b7-4c3e-a7db-5a019da307be" width="50%" alt="Cant load img..">
   <img src="https://github.com/user-attachments/assets/2f3daa83-64cc-4570-a972-9fd6f91207bfe" width="50%" alt="Cant load img..">
-    <img src="https://github.com/user-attachments/assets/0d2d6b65-55fc-4151-b89a-38cbdc008531" width="50%" alt="Cant load img..">
-    <img src="https://github.com/user-attachments/assets/9fc16139-cb0f-40b8-9dd9-a8f6978c4451" width="50%" alt="Cant load img..">
-    <img src="https://github.com/user-attachments/assets/5ccaa292-4c37-41c7-84c5-f53550587721" width="50%" alt="Cant load img..">
-    <img src="https://github.com/user-attachments/assets/823724b9-c358-46c0-b031-0a441560d861" width="50%" alt="Cant load img..">
-    <img src="https://github.com/user-attachments/assets/a77bdb95-e161-4159-b25d-0ee3cfe23b7d" width="50%" alt="Cant load img..">
-
-  <-img src="" width="50%" alt="Cant load img.."><br>
+  <img src="https://github.com/user-attachments/assets/0d2d6b65-55fc-4151-b89a-38cbdc008531" width="50%" alt="Cant load img..">
+  <img src="https://github.com/user-attachments/assets/9fc16139-cb0f-40b8-9dd9-a8f6978c4451" width="50%" alt="Cant load img..">
+  <img src="https://github.com/user-attachments/assets/5ccaa292-4c37-41c7-84c5-f53550587721" width="50%" alt="Cant load img..">
+  <img src="https://github.com/user-attachments/assets/823724b9-c358-46c0-b031-0a441560d861" width="50%" alt="Cant load img..">
+  <img src="https://github.com/user-attachments/assets/a77bdb95-e161-4159-b25d-0ee3cfe23b7d" width="50%" alt="Cant load img..">
 <ul>
-  <li>Giao diện admin</li>
+  <li><b>Giao diện admin</b></li>
 </ul>
   <img src="https://github.com/user-attachments/assets/50c6aa66-e38e-4e15-a4d6-3f0d406d8739" width="50%" alt="Cant load img..">
   <img src="https://github.com/user-attachments/assets/20eb8611-a5dc-4b2a-942e-4ea7f4b0a693" width="50%" alt="Cant load img..">
