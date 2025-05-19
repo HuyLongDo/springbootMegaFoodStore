@@ -6,7 +6,7 @@ Website cửa hàng bánh ngọt sử dụng java springboot, mình chọn frame
 Nghiệp vụ:<br>
 &nbsp; Đối với khách hàng là những người có nhu cầu mua bánh, họ có thể xem, tìm kiếm các thông tin về các loại bánh, mua và đặt hàng một cách nhanh chóng, tiện lợi không ràng buộc về thời gian hay đi lại.<br>
 &nbsp; Cụ thể quản lý gồm có thêm, xóa, sửa các sản phẩm (bánh), danh mục,… giúp quản lý cửa hàng tiện hơn.<br>
-Còn khách hàng có 2 loại khách hàng. Khách hàng có tài khoản sẽ khác với khách hàng không có tài khoản ở thanh toán là khách vãng lai. Khách vãng lai có thể thêm sản phẩm vào giỏ và thanh toán . Cả 2 loại khách hàng đều được xem thông tin sản phẩm (bánh), danh mục…Sau khi họ đặt bánh nhân viên sẽ gọi điện xác nhận đơn hàng.
+&nbsp; Còn khách hàng có 2 loại khách hàng. Khách hàng có tài khoản sẽ khác với khách hàng không có tài khoản ở thanh toán là khách vãng lai. Khách vãng lai có thể thêm sản phẩm vào giỏ và thanh toán . Cả 2 loại khách hàng đều được xem thông tin sản phẩm (bánh), danh mục…Sau khi họ đặt bánh nhân viên sẽ gọi điện xác nhận đơn hàng.
 
 <H3>3. Công nghệ</H3>
 Frontend: 
@@ -66,7 +66,15 @@ Do chưa tích hợp docker nên chỉ chạy được module hiện tại cho m
   <img src="https://github.com/user-attachments/assets/96fab2f7-ecd3-4c9a-a68f-9262f2ec28d8" width="50%" alt="Cant load img..">
   <img src="https://github.com/user-attachments/assets/7b2826be-89fe-48db-8656-d4ed4117b0fa" width="50%" alt="Cant load img..">
   <img src="https://github.com/user-attachments/assets/623cf492-e5e4-4801-871a-63af8dc720c4" width="50%" alt="Cant load img..">
-  <img src="https://github.com/user-attachments/assets/115b57d0-c2b7-4c3e-a7db-5a019da307be" width="50%" alt="Cant load img.."><br>
+  <img src="https://github.com/user-attachments/assets/115b57d0-c2b7-4c3e-a7db-5a019da307be" width="50%" alt="Cant load img..">
+  <img src="https://github.com/user-attachments/assets/2f3daa83-64cc-4570-a972-9fd6f91207bfe" width="50%" alt="Cant load img..">
+    <img src="https://github.com/user-attachments/assets/0d2d6b65-55fc-4151-b89a-38cbdc008531" width="50%" alt="Cant load img..">
+    <img src="https://github.com/user-attachments/assets/9fc16139-cb0f-40b8-9dd9-a8f6978c4451" width="50%" alt="Cant load img..">
+    <img src="https://github.com/user-attachments/assets/5ccaa292-4c37-41c7-84c5-f53550587721" width="50%" alt="Cant load img..">
+    <img src="https://github.com/user-attachments/assets/823724b9-c358-46c0-b031-0a441560d861" width="50%" alt="Cant load img..">
+    <img src="https://github.com/user-attachments/assets/a77bdb95-e161-4159-b25d-0ee3cfe23b7d" width="50%" alt="Cant load img..">
+
+
   <-img src="" width="50%" alt="Cant load img.."><br>
 </ul>
 <ul>
