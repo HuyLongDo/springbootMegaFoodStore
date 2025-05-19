@@ -60,6 +60,7 @@ Do chưa tích hợp docker nên chỉ chạy được module hiện tại cho m
 <h3>7. Demo giao diện</h3>
 <ul>
   <li>Một số giao diện cửa hàng</li>
+</ul>
   <img style="margin-bottom: 100px" src="https://github.com/user-attachments/assets/4d0c9c1e-3131-452f-b2c6-9bf905c4f1ed" width="50%"  alt="Cant load img..">
   <img style="margin-bottom: 100px" src="https://github.com/user-attachments/assets/2a8c209c-2ae7-41af-b3c5-1373534730b8" width="50%"  alt="Cant load img..">
   <img src="https://github.com/user-attachments/assets/2a8c209c-2ae7-41af-b3c5-1373534730b8" width="50%" alt="Cant load img..">
@@ -74,10 +75,9 @@ Do chưa tích hợp docker nên chỉ chạy được module hiện tại cho m
     <img src="https://github.com/user-attachments/assets/823724b9-c358-46c0-b031-0a441560d861" width="50%" alt="Cant load img..">
     <img src="https://github.com/user-attachments/assets/a77bdb95-e161-4159-b25d-0ee3cfe23b7d" width="50%" alt="Cant load img..">
 
-
   <-img src="" width="50%" alt="Cant load img.."><br>
-</ul>
 <ul>
   <li>Giao diện admin</li>
+</ul>
 
 
