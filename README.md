@@ -79,5 +79,14 @@ Do chưa tích hợp docker nên chỉ chạy được module hiện tại cho m
 <ul>
   <li>Giao diện admin</li>
 </ul>
-
+  <img src="https://github.com/user-attachments/assets/50c6aa66-e38e-4e15-a4d6-3f0d406d8739" width="50%" alt="Cant load img..">
+  <img src="https://github.com/user-attachments/assets/20eb8611-a5dc-4b2a-942e-4ea7f4b0a693" width="50%" alt="Cant load img..">
+  <img src="https://github.com/user-attachments/assets/455288e3-1538-4804-9d56-612d0ba95e02" width="50%" alt="Cant load img..">
+  <img src="https://github.com/user-attachments/assets/2939f9ce-293a-490a-b446-15033e896c39" width="50%" alt="Cant load img..">
+  <img src="https://github.com/user-attachments/assets/d060d8a4-36aa-4ba3-8cdd-2581b1d22041" width="50%" alt="Cant load img..">
+  <img src="https://github.com/user-attachments/assets/a530925f-6416-493a-8c40-378392f4e51d" width="50%" alt="Cant load img..">
+  <img src="https://github.com/user-attachments/assets/fa1119e7-aa45-4b85-988d-bd7d649f4cd5" width="50%" alt="Cant load img..">
+  <img src="https://github.com/user-attachments/assets/8cc400f6-fe0a-4b9b-96d8-bfaeb31f10e3" width="50%" alt="Cant load img..">
+  <img src="https://github.com/user-attachments/assets/4a0bdb0d-e98a-4a3b-8c17-35c40f8902e5" width="50%" alt="Cant load img..">
+  
 
