@@ -1,0 +1,5 @@
+
+tìm hiểu
+RestTemplate restTemplate = new RestTemplate();
+        String apiUrl = "http://localhost:8080/api/cakes";
+        List<?> cakes = restTemplate.getForObject(apiUrl, List.class);

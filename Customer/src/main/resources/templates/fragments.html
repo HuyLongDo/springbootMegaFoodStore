@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "https://www.thymeleaf.org/">
+<head th:fragment="head">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+    <title th:text="${title}"></title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" th:href="@{/images/favicon.ico}" type="image/x-icon">
+    <link rel="apple-touch-icon" th:href="@{/images/apple-touch-icon.png}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" th:href="@{/css/responsive.css}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/custom.css}">
+</head>
+<body>
+
+<!-- Start Main Top -->
+<div class="main-top" th:fragment="main-top">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="our-link">
+                    <ul>
+                        <li><a href="#"> SDT : 0912312323</a></li>
+                        <li><a href="#"><i class="fas fa-location-arrow"></i> Địa chỉ: 99, Đường Sài Gòn, Quận 1,
+                            TP.HCM</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="login-box">
+                    <select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In" onchange="location = this.value;">
+                        <option th:text="${session.username != null}? ${session.username} : 'Thành Viên'" ></option>
+                        <option th:if="${session.username == null}" value="register">Đăng Ký</option>
+                        <option th:if="${session.username == null}" value="login">Đăng Nhập</option>
+                        <option th:if="${session.username != null}" value="logout">Đăng Xuất</option>
+                    </select>
+                </div>
+                <div class="text-slid-box">
+                    <div id="offer-box" class="carouselTicker">
+                        <ul class="offer-box">
+                            <li>
+                                <i class="fab fa-opencart"></i> Giảm 10% cho thành viên mới
+                            </li>
+                            <li>
+                                <i class="fab fa-opencart"></i> Freeship
+                            </li>
+                            <li>
+                                <i class="fab fa-opencart"></i> Giảm 20% khi mua bánh tart kem dâu: đặc biệt phủ kem dâu
+                            </li>
+                            <li>
+                                <i class="fab fa-opencart"></i> Hãy ghé mua bây giờ!
+                            </li>
+                            <li>
+                                <i class="fab fa-opencart"></i> Giảm 10% cho thành viên mới
+                            </li>
+                            <li>
+                                <i class="fab fa-opencart"></i> Freeship
+                            </li>
+                            <li>
+                                <i class="fab fa-opencart"></i> Giảm 20% khi mua bánh tart kem dâu: đặc biệt phủ kem dâu
+                            </li>
+                            <li>
+                                <i class="fab fa-opencart"></i> Hãy ghé mua bây giờ!
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Main Top -->
+
+<!-- Start Main Top -->
+<header class="main-header" th:fragment="main-header">
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+        <div class="container">
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu"
+                        aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" ><img th:src="@{/images/LogoShop.png}" class="logo" width="130"
+                                                            height="100" alt=""></a>
+            </div>
+            <!-- End Header Navigation -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li class="nav-item active"><a class="nav-link fas" th:href="@{/}">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link fas" th:href="@{/index}">Cửa hàng</a></li>
+
+                    <li class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle fas" data-toggle="dropdown">Danh mục bánh</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="fas" th:href="@{/shop-detail}">Chi tiết cửa hàng</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle fas" data-toggle="dropdown">Thông tin & Đơn hàng</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="fas" th:href="@{/orders}">Đơn hàng của bạn</a></li>
+                            <li><a class="fas" th:href="@{/your-profile}">Thông tin cá nhân</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link fas" th:href="@{/contact}">Liên hệ</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+
+            <!-- Start Atribute Navigation -->
+            <div class="attr-nav">
+                <ul >
+                    <li
+                        class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                    <li
+                        class="side-menu">
+                        <a href="#" >
+                            <i class="fa fa-shopping-bag"></i>
+                            <span class="badge"
+                                  th:text="${session.totalItems == null} ? '0' : ${session.totalItems}"></span>
+                            <p>My Cart</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Atribute Navigation -->
+        </div>
+        <!-- Start Side Menu -->
+                <div class="side">
+                    <a href="#" class="close-side"><i class="fa fa-times"></i></a>
+                    <li class="cart-box">
+<!--                        <ul th:each="cartItem : ${session.shoppingCart.cartItems}"  class="cart-list">-->
+                        <ul class="cart-list">
+<!--                            <li>-->
+<!--                                <a href="#" class="photo">-->
+<!--                                    <img th:src="'data:image/jpeg;base64,' + ${cartItem.product.image}" class="cart-thumb" alt=""/>-->
+<!--                                </a>-->
+<!--                                <h6><p th:text="${cartItem.product.name}"></p></h6>-->
+<!--                                <p> - <span th:text="'$' + ${cartItem.unitPrice}" class="price"></span></p>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a href="#" class="photo"><img th:src="@{/images/#.jpg}"-->
+<!--                                                               class="cart-thumb" alt=""/></a>-->
+<!--                                <h6><a href="#">Octopus with Black Bean</a></h6>-->
+<!--                                <p>1 - <span class="price">$60.00</span></p>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a href="#" class="photo"><img th:src="@{/images/#.jpg}" class="cart-thumb" alt=""/></a>-->
+<!--                                <h6><a href="#">Crab Toast</a></h6>-->
+<!--                                <p>1 - <span class="price">$40.00</span></p>-->
+<!--                            </li>-->
+                            <li class="total">
+                                <a th:href="@{/cart}" href="cart.html"
+                                   class="btn btn-default hvr-hover btn-cart">Giỏ Hàng</a>
+                                <span class="float-right"><strong>Sản phẩm của bạn</strong></span>
+                            </li>
+                        </ul>
+                    </li>
+                </div>
+            <!--End side menu-->
+
+    </nav>
+    <!-- End Navigation -->
+</header>
+<!-- End Main Top -->
+
+<!-- Start Top Search -->
+<div class="top-search" th:fragment="top-search">
+    <div class="container">
+        <form th:action="@{/search-product}" method="get">
+        <div class="input-group">
+            <span type="submit" class="input-group-addon"><i class="fa fa-search"></i></span>
+                <input type="text" class="form-control" name="keyword" placeholder="Tìm tên bánh">
+            <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+        </div>
+        </form>
+    </div>
+</div>
+<!-- End Top Search -->
+
+
+<!-- Start Slider -->
+<div class="all-title-box" th:fragment="slider">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 th:text="${page}"></h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a th:href="@{/home}" href="home.html">Home</a></li>
+                    <li class="breadcrumb-item active"> Menu </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Slider -->
+
+<!-- Start Feed  -->
+<div class="instagram-box" th:fragment="feed">
+    <div class="main-instagram owl-carousel owl-theme">
+        <div class="item">
+            <div class="ins-inner-box">
+                <a th:href="@{/index}" href="index.html"><img th:src="@{/images/london6.jpg}" alt=""/></a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img th:href="@{/index}" th:src="@{/images/london1.jpg}" alt=""/>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <a th:href="@{/index}" href="index.html"><img th:src="@{/images/london2.jpg}" alt=""/></a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <a th:href="@{/index}" href="index.html"><img th:src="@{/images/london3.jpg}" alt=""/></a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <a th:href="@{/index}" href="index.html"><img th:src="@{/images/london4.jpg}" alt=""/></a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <a th:href="@{/index}" href="index.html"><img th:src="@{/images/london5.jpg}" alt=""/></a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <a th:href="@{/index}" href="index.html"><img th:src="@{/images/london7.jpg}" alt=""/></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Feed  -->
+
+<!-- Start Footer  -->
+<footer th:fragment="footer">
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-top-box">
+                        <h3>Thời gian mở cửa</h3>
+                        <ul class="list-time">
+                            <li>Thứ hai - Chủ nhật: 08.00 - 18.00</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-top-box">
+                        <h3>Liên hệ chúng tôi</h3>
+                        <ul class="list-time">
+                            <li><i class="fas fa-phone-square"></i> Số điện thoại: 0912312323</li>
+                            <li><i class="fas fa-envelope"></i> Email: dh51800556@gmail.com</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Địa chỉ: 99, Đường Sài Gòn, Quận 1,
+                                TP.HCM</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-top-box">
+                        <h3>Phương tiện truyền thông</h3>
+                        <p>Liên kết xã hội - Delicacy Cake </p>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ALL JS FILES -->
+<div th:fragment="script">
+    <script th:src="@{/js/jquery-3.2.1.min.js}"></script>
+    <script th:src="@{/js/popper.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <!-- ALL PLUGINS -->
+    <script th:src="@{/js/jquery.superslides.min.js}"></script>
+    <script th:src="@{/js/bootstrap-select.js}"></script>
+    <script th:src="@{/js/inewsticker.js}"></script>
+    <script th:src="@{/js/bootsnav.js}"></script>
+    <script th:src="@{/js/images-loded.min.js}"></script>
+    <script th:src="@{/js/isotope.min.js}"></script>
+    <script th:src="@{/js/owl.carousel.min.js}"></script>
+    <script th:src="@{/js/baguetteBox.min.js}"></script>
+    <script th:src="@{/js/form-validator.min.js}"></script>
+    <script th:src="@{/js/contact-form-script.js}"></script>
+    <script th:src="@{/js/custom.js}"></script>
+    <!--My script custom-->
+    <script th:src="@{/js/myscript.js}"></script>
+</div>
+
+<div th:fragment="backToTop"><a href="#" id="back-to-top" title="Back to top" style="display: none;"><br><br>&uarr;</a></div>
+
+<!--<script>-->
+<!--    var searchInput = document.getElementById("searchInput");-->
+<!--    searchInput.addEventListener("keyup", function(event) {-->
+<!--        if (event.keyCode === 13) { // Kiểm tra nút nhấn có phải là Enter (keyCode = 13)-->
+<!--            event.preventDefault(); // Ngăn chặn hành động mặc định khi nhấn Enter (submit form)-->
+<!--            performSearch(); // Gọi hàm xử lý tìm kiếm-->
+<!--        }-->
+<!--    });-->
+
+<!--    function performSearch() {-->
+<!--        var keyword = searchInput.value;-->
+<!--        window.location.href = "/search-product?keyword=" + encodeURIComponent(keyword);-->
+<!--    }-->
+<!--</script>-->
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+</body>
+</html>

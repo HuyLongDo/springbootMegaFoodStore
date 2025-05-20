@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<!-- Basic -->
+
+<head th:replace="~{fragments::head}">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<!-- Start Main Top -->
+<div th:replace="~{fragments::main-top}">
+</div>
+<!-- End Main Top -->
+
+<!-- Start Main Top -->
+<header th:replace="~{fragments::main-header}">
+</header>
+<!-- End Main Top -->
+
+<!-- Start Top Search -->
+<div th:replace="~{fragments::top-search}">
+</div>
+<!-- End Top Search -->
+
+
+<!-- Start All Title Box -->
+<div th:replace="~{fragments::slider}">
+</div>
+<!-- End All Title Box -->
+
+<!-- Start Contact Us  -->
+    <div style="margin: 0px 0px 0px 0px;" class="container">
+
+                    <!-- 404 Error Text -->
+                    <section class="page_404">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 ">
+                                    <div class="col-sm-10 col-sm-offset-1  text-center">
+                                        <div class="four_zero_four_bg">
+                                            <h1 class="text-center ">404</h1>
+
+                                        </div>
+
+                                        <div class="contant_box_404">
+                                            <h3 class="h2">
+                                                Look like you're lost
+                                            </h3>
+
+                                            <p>the page you are looking for not avaible!</p>
+
+                                            <a href="" class="link_404">Go to shopping</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                <br>
+    </div>
+</div>
+<!-- End Cart -->
+
+<!-- Start Feed  -->
+<div th:replace="~{fragments::feed}">
+</div>
+<!-- End Feed  -->
+
+<!-- Start Footer  -->
+<footer th:replace="~{fragments::footer}"></footer>
+
+<div th:replace="~{fragments::backToTop}"></div>
+
+<div th:replace="~{fragments::script}"></div>
+
+<style>
+    .page_404{ padding:40px 0; background:#fff; font-family: 'Arvo', serif;
+    }
+
+    .page_404  img{ width:100%;}
+
+    .four_zero_four_bg{
+
+        background-image: url('images/404icon.gif');
+        height: 400px;
+        background-position: center;
+    }
+
+
+    .four_zero_four_bg h1{
+        font-size:80px;
+    }
+
+    .four_zero_four_bg h3{
+        font-size:80px;
+    }
+
+    .link_404{
+        color: #fff!important;
+        padding: 10px 20px;
+        background: #39ac31;
+        margin: 20px 0;
+        display: inline-block;}
+    .contant_box_404{ margin-top:-50px;}
+</style>
+
+</body>
+
+</html>

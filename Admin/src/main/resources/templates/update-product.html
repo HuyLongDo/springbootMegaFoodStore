@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "https://www.thymeleaf.org/">
+
+<head th:replace = "~{fragments::header}">
+</head>
+
+<body id="page-top">
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul th:replace = "~{fragments::sideBar}">
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <nav th:replace = "~{fragments::top-navbar}">
+            </nav>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <form id="formUpdateProduct" class="form-horizontal"
+                      th:action="@{/update-product/{id}(id = ${productDto.id})}"
+                      th:object = "${productDto}" method="post"
+                      enctype="multipart/form-data">
+                    <fieldset>
+                        <!-- Form Name -->
+                        <center><legend><b>Cập nhật bánh</b> </legend></center>
+
+                        <!-- Name input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="product_name">Tên bánh</label>
+                            <div class="col-md-4">
+                                <input id="product_name" th:field="*{name}" name="product_name" class="form-control input-md" required type="text">
+                            </div>
+                        </div>
+
+                        <!-- Category input -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="categories">Loại bánh</label>
+                            <div class="col-md-4">
+                                <select id="categories" th:field="*{category}" name="categories" class="form-control">
+                                    <option th:value = "null">-SELECT-</option>
+                                    <option th:each = "category : ${categories}"
+                                            th:value = "${category.id}"
+                                            th:text = "${category.name}">
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Descripton input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="description">Mô tả nguyên liệu</label>
+                            <div class="col-md-4">
+                                <input id="description" th:field="*{description}" name="description" class="form-control input-md" required="" type="text">
+                            </div>
+                        </div>
+
+                        <!-- Quantity input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="available_quantity">Số lượng</label>
+                            <div class="col-md-4">
+                                <input id="available_quantity" th:field="*{currentQuantity}" name="available_quantity" class="form-control input-md" required="" type="text">
+                            </div>
+                        </div>
+
+                        <!-- Price input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="price">Giá</label>
+                            <div class="col-md-4">
+                                <input id="price"  th:field="*{costPrice}" name="price" class="form-control input-md" required="" type="text">
+                            </div>
+                        </div>
+
+                        <!-- Sale Price input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="price">Giảm giá</label>
+                            <div class="col-md-4">
+                                <input id="price"  th:field="*{salePrice}" name="price" class="form-control input-md" required="" type="text">
+                            </div>
+                        </div>
+
+                        <!-- Image input-->
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <!-- File Button -->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="image">Hình</label>
+                                    <div class="col-md-4">
+                                        <img class = "my-product-image"
+                                             style="height: 60px; width: 80px;" alt=""
+                                             th:src="'data:image/jpeg;base64,' + *{image}"><br><br>
+                                        <input id="image" name="imageProduct" class="input-file" type="file">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Cập nhật</button>
+                        <br><br>
+
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer th:replace="~{fragments::footer}">
+        </footer>
+        <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a th:replace="~{fragments::scroll}">
+</a>
+
+<!-- Bootstrap core JavaScript-->
+<div th:replace="~{fragments::script}"></div>
+<script th:src="@{/js/products.js}"></script>
+
+</body>
+
+</html>

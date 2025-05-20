@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="~{fragments::header}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body id="page-top">
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!--Sidebar-->
+    <ul th:replace="~{fragments::sideBar}"></ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <nav th:replace="~{fragments::top-navbar}"></nav>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <h4 style="font-style: italic;"><b>Cửa Hàng</b></h4>
+                <div class="row center-block">
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-dark shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            Tổng số bánh</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            <p th:text="${totalProductStore != null}?${totalProductStore}:'0'"></p></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fa fa-birthday-cake fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                            Tổng số loại bánh</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            <p th:text="${totalCategoryStore != null} ? ${totalCategoryStore}:'0'"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fa fa-coffee fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-warning shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                            Tổng số voucher
+                                        </div>
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                    <p th:text="${totalVoucherStore != null} ? ${totalVoucherStore}:'0'"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="	fa fa-eject fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row center-block">
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-secondary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            Tổng số nhân viên</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            <p th:text="${totalEmployeeStore != null} ? ${totalEmployeeStore}:'0'"></p></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-id-badge fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-warning shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                            Tổng số hình cửa hàng</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            <p th:text="${totalImageStore != null} ? ${totalImageStore}:'0'"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="	fa fa-list-alt fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-danger shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                            Số khách thành viên
+                                        </div>
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                    <p th:text="${totalCustomer != null} ? ${totalCustomer}:'0'"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="far fa-user-circle fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <!--<br>
+                &lt;!&ndash;Doanh thu&ndash;&gt;
+                <h4 style="font-style: italic;">Doanh thu</h4>
+                <a th:href="@{/thong-ke-banh}" class = "btn btn-primary">Tổng số bánh</a> |
+                <a th:href="@{/thong-ke-doanhThu}" class = "btn btn-primary">Tổng doanh thu</a> |
+                <a th:href="@{/thong-ke-order}" class = "btn btn-primary">Tổng số đơn hàng</a>-->
+
+                <!--Thống kê-->
+                <h4 style="font-style: italic;"><b>Doanh Thu</b></h4>
+                <div class="row center-block">
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            Số bánh bán được:Tuần</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            <p th:text="${totalSoldCakes != null} ? ${totalSoldCakes} : '0' "></p></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                            Tổng (Doanh thu :Tuần)</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            <p th:text="${totalPriceOrder !=null } ? ${#numbers.formatInteger(totalPriceOrder,3,'POINT')+' Đ'}:'0 Đ'"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-info shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tổng đơn tuần hiện tại
+                                        </div>
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                    <p th:text="${totalSoldOrder != null} ? ${#numbers.formatInteger(totalSoldOrder,1,'POINT')}:'0'"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Hàng dưới-->
+                <div class="row center-block">
+
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                            Tổng (Đơn hàng: Đã thanh toán)</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            <p th:text="${totalAllSoldOrder !=null } ? ${totalAllSoldOrder}:'0'"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-info shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tổng (Đơn hàng: Hủy)
+                                        </div>
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                    <p th:text="${totalCancelOrder != null} ? ${totalCancelOrder}:'0'"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+
+                <!--Loại bánh-->
+                <div class="col-lg-6">
+                    <h4 style="font-style: italic;"><b>Loại Bánh (Tổng số bánh)</b></h4>
+                    <div class="card position-relative">
+                        <div  class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-secondary">Số lượng hiện có</h6>
+                        </div>
+                        <div  class="card-body">
+                            <div th:each="categories : ${categories}" class="mb-3">
+                                <span th:text="${categories.name + '(' + categories.productSize + ')'}"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div><br><br>
+
+                <!--Doanh thu 2 tuần trước-->
+                <h4 style="font-style: italic;"><b>Doanh thu 2 tuần</b></h4>
+                <button class="btn btn-primary dropdown-toggle" type="button"
+                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                    Chọn tuần
+                </button><br><br>
+                <div class="dropdown-menu animated--fade-in"
+                     aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" th:href="@{/doanh-thu-OneWeekAgo}" href="#">Tuần hiện tại</a>
+                    <a class="dropdown-item" th:href="@{/doanh-thu-TwoWeekAgo}" href="#">Tuần trước</a>
+                </div>
+
+                <div class="row center-block">
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-info shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Doanh thu
+                                        </div>
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                    <p th:text="${totalPriceTwoWeek != null} ? ${totalPriceTwoWeek} : ${totalPriceOrderOneWeek} "></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Main Content -->
+
+        </div>
+        <br><br>
+        <!-- End of Content Wrapper -->
+
+        <!-- Footer -->
+        <footer th:replace="~{fragments::footer}"></footer>
+        <!-- End of Footer -->
+
+    </div>
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a th:replace="~{fragments::scroll}"></a>
+
+<!-- Bootstrap core JavaScript-->
+<div th:replace="~{fragments::script}"></div>
+
+<script th:src="@{/js/categories.js}"></script>
+<script th:src="@{/js/demo/chart-bar-demo.js}"></script>
+
+</body>
+
+</html>

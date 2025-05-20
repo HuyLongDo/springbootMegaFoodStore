@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<!-- Basic -->
+
+<head th:replace="~{fragments::head}">
+</head>
+
+<body>
+<div th:replace="~{fragments::main-top}"></div>
+<!-- End Main Top -->
+
+<!-- Start Main Header-->
+<header th:replace="~{fragments::main-header}"></header>
+<!-- End Main Top -->
+
+<!-- Start Top Search -->
+<div th:replace="~{fragments::top-search}">
+</div>
+<!-- End Top Search -->
+
+<!-- Start Slider -->
+<div id="slides-shop" class="cover-slides">
+    <ul class="slides-container">
+        <li class="text-center">
+            <img src="images/boulangerie-jade-chocolate-cake.jpg" alt="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="m-b-20"><strong>Welcome To <br> Delicacy Cake</strong></h1>
+                        <p class="m-b-40">Enjoy your cake! <br> Have you a good, fun working day and delicious cake!</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="text-center">
+            <img src="images/boulangerie-jade-products-cakes-tarts-pastries3.jpg" alt="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="m-b-20"><strong>Welcome To <br> Delicacy Cake</strong></h1>
+                        <p class="m-b-40">Enjoy your cake! <br> Have you a good, fun working day and delicious cake!</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="text-center">
+            <img src="images/hero-1.jpg" alt="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="m-b-20"><strong>Welcome To <br> Delicacy Cake</strong></h1>
+                        <p class="m-b-40">Enjoy your cake! <br> Have you a good, fun working day and delicious cake!</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="slides-navigation">
+        <a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+        <a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+    </div>
+</div>
+<!-- End Slider -->
+
+
+<!-- Start About Page  -->
+<div class="about-box-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="banner-frame"><img class="img-fluid" src="images/CakeLogo.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h2 class="noo-sh-title-top"> <span><i>WE ARE DELICACY PATISSERIE</i></span></h2>
+                <p>Sự ra đời của Delycacy bắt nguồn từ niềm đam mê bất tận về bánh ngọt của một người đầu bếp và tư duy
+                    sáng tạo của một nhà thiết kế. <br> <br>
+                    Khi bước vào cửa hàng, bạn sẽ ngập tràn trong mùi hương thơm ngọt của bánh ngọt tươi mới. Quầy bày
+                    hàng trưng bày những tác phẩm nghệ thuật bánh ngọt tinh xảo. <br> Từ những chiếc macaron màu sắc tươi tắn,
+                    bánh éclair thơm ngon đủ loại đến những chiếc bánh tart mềm mịn và bánh mousse tinh tế.
+                </p>
+                <p>Được định hình là thương hiệu bánh ngọt chuẩn Pháp, DELYCACY trao tới bạn những chiếc bánh Entremet
+                    tinh tế, cùng nhiều loại bánh ngọt cao cấp và trên hết – niềm hạnh phúc khi thưởng thức bánh cùng
+                    những người mà bạn yêu thương.</p>
+                <p>Chúng tôi sẽ phục vụ cho bạn bè và gia đình của chúng tôi. Nếu nó đủ tốt cho bàn của chúng tôi, bạn sẽ muốn nó trên
+                   bàn của bạn!</p>
+                <a class="btn hvr-hover" th:href="@{/contact}">Đọc thêm</a>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-sm-6 col-lg-4">
+                <div class="service-block-inner">
+                    <h3><i><center>Chất lượng</center></i></h3>
+                    <p> <center>Để mang lại trải nghiệm đáng nhớ trong từng chiếc bánh, sản phẩm của Delicacy được làm từ những
+                    nguyên liệu được chọn lựa cẩn thận và hoàn thiện tỉ mỉ với những tiêu chuẩn cao cấp nhất.</center> </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="service-block-inner">
+                    <h3><i><center>Cho mọi người</center></i></h3>
+                    <p> <center>Bánh của Delicacy được nghiên cứu để phù hợp với khẩu vị của người Việt và luôn được đóng gói
+                    chỉn chu để ai cũng có thể nhận về những niềm vui khi bánh được giao tới tận nơi.</center> </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="service-block-inner">
+                    <h3><i><center>Sự chân thành</center></i></h3>
+                    <p> <center>Đối với Delicacy, giá trị lớn nhất mà chúng tôi đề cao là sự chân thành. Niềm vui của mọi
+                    nguời khi thưởng thức bánh, chính là nguồn động lực cho chúng tôi làm việc mỗi ngày.</center> </p>
+                </div>
+            </div>
+        </div>
+        <hr style="width: 100%;">
+        <br><br>
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="noo-sh-title-top"> <span><i> Entremet</i></span></h2>
+                <p>Là dòng bánh hiện đại và cao cấp nhất của Pháp, Entremet được tạo nên bởi nhiều tầng kết cấu đặc biệt và những
+                    kỹ thuật đòi hỏi tay nghề cao của người Chef.  <br>
+                    Khi bước vào cửa hàng, bạn sẽ ngập tràn trong mùi hương thơm ngọt của bánh ngọt tươi mới. Quầy bày
+                    hàng trưng bày những tác phẩm nghệ thuật bánh ngọt tinh xảo. <br> Từ những chiếc macaron màu sắc tươi tắn,
+                    bánh éclair thơm ngon đủ loại đến những chiếc bánh tart mềm mịn và bánh mousse tinh tế.
+                </p>
+                <p>Mỗi chiếc bánh là sự hoà quyện của những lớp bạt xốp mềm, lớp kem thơm ngậy và hương vị đặc trưng của trái cây tươi.</p>
+                <p>Bạn sẽ tìm thấy ở Delicacy một chiếc bánh Entremet đặc biệt dành cho mọi dịp chúc mừng, hoặc cũng có thể là một nửa chiếc bánh Entremet để thưởng thức mỗi ngày một cách đơn giản, mà không cần đợi đến dịp gì.</p>
+            </div><br>
+            <div class="col-lg-6 ">
+                <div class="banner-frame"><img class="img-fluid mx-auto d-block" style="width:350px;height:500px;" src="images/contact-bg.jpg" alt=""/>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        <hr style="width: 100%;"><br>
+        <div class="row">
+            <div class="col-lg-6 ">
+                <div class="banner-frame"><img class="img-fluid mx-auto d-block"  style="width:350px;height:550px;" src="images/thapbanhFrance.jpg" alt=""/>
+                </div>
+            </div><br>
+            <div class="col-lg-6 float-right">
+                <h2 class="noo-sh-title-top"> <span><i>Beloved Darling</i></span></h2>
+                <p>Nếu bạn là fan của Sô-cô-la, hãy thử Beloved Darling - với lớp kem mousse được làm từ sô-cô-la đen chất lượng
+                    cao đi cùng mứt quả dâu rừng được nấu tay và một lớp crémeux làm từ quả vanilla Madagascar.  <br>
+                    Khi bước vào cửa hàng, bạn sẽ ngập tràn trong mùi hương thơm ngọt của bánh ngọt tươi mới. Quầy bày
+                    hàng trưng bày những tác phẩm nghệ thuật bánh ngọt tinh xảo. <br> Từ những chiếc macaron màu sắc tươi tắn,
+                    bánh éclair thơm ngon đủ loại đến những chiếc bánh tart mềm mịn và bánh mousse tinh tế.
+                </p>
+                <p>Cũng giống như sự bùng nổ trong hương vị, vẻ ngoài của chiếc bánh được trang trí bởi lớp tráng gương màu đỏ đun kết hợp với chiếc lông vũ phủ nhũ vàng đồng sang trọng. </p>
+                <p>Đây sẽ là lựa chọn hoàn hảo cho mọi bữa tiệc của bạn. Enjoy!</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--<p id="demo">Test button</p>-->
+<!--<button type="button" onclick="myFunction()">Try it</button>-->
+
+<!-- Start Feed  -->
+<div th:replace="~{fragments::feed}">
+</div>
+<!-- End Feed  -->
+
+<!-- Start Footer  -->
+<footer th:replace="~{fragments::footer}">
+</footer>
+
+<div th:replace="~{fragments::backToTop}"></div>
+
+<!-- ALL JS FILES -->
+<div th:replace="~{fragments::script}"></div>
+</body>
+
+</html>

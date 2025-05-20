@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="~{fragments::header}"></head>
+<body id="page-top">
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!--Sidebar-->
+    <ul th:replace="~{fragments::sideBar}"></ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <nav th:replace="~{fragments::top-navbar}"></nav>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            &emsp;&emsp;<button type="button" class="btn btn-primary ml-auto " data-toggle="modal" data-target="#exampleAddDiscountModal"
+                                data-whatever="@mdo">Thêm mã giảm giá</button>
+            <br><br>
+            <center><p th:if="${size == 0}">Không có mã giảm giá</p></center>
+            <div th:if="${success}" class="text-center alert alert-success">
+                <p th:text="${success}">
+                </p>
+            </div>
+            <div th:if="${error}" class="text-center alert alert-danger">
+                <p th:text="${error}"></p>
+            </div>
+
+            <table class="table table-striped" th:if="${size > 0}">
+                <thead>
+                <tr>
+                    <th scope="col">Mã</th>
+                    <th scope="col">Tên</th>
+                    <th scope="col">Code</th>
+                    <th scope="col">% Giảm</th>
+                    <th scope="col">Mô tả</th>
+                    <th scope="col">Ngày BĐ</th>
+                    <th scope="col">Ngày KT</th>
+                    <th scope="col">Cập nhật</th>
+                    <th scope="col">Kích hoạt</th>
+                    <th scope="col">Xóa</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="discount : ${discountList}">
+                    <th scope="row" th:text="${discount.id}"></th>
+                    <td th:text="${discount.name}"></td>
+                    <td th:text="${discount.codeDiscount}"></td>
+                    <td th:text="${discount.valueDiscount}"></td>
+                    <td th:text="${discount.description}"></td>
+                    <td th:text="${discount.startDay}"></td>
+                    <td th:text="${discount.endDay}"></td>
+                    <td>
+                        <a id="editButton"
+                           th:href="@{/findDiscountById/{id}(id = ${discount.id})}"
+                           class="btn btn-primary">Update</a>
+                    </td>
+                    <td>
+                        <a th:if = "${discount.enable} == true"
+                           th:href="@{/enable-discount/{id}(id = ${discount.id})}"
+                           class="btn btn-danger">Disable</a>
+                        <a th:if = "${discount.enable} == false"
+                           th:href="@{/enable-discount/{id}(id = ${discount.id})}"
+                           class="btn btn-success">Enabled</a>
+                    </td>
+                    <td>
+                        <a th:href="@{/delete-discount/{id}(id = ${discount.id})}"
+                           class="btn btn-warning">Delete</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <!-- End of Main Content -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+        <!-- Footer -->
+        <footer th:replace="~{fragments::footer}"></footer>
+        <!-- End of Footer -->
+
+    </div>
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a th:replace="~{fragments::scroll}"></a>
+
+<!--Add discount Modal-->
+<div class="modal fade" id="exampleAddDiscountModal" tabindex="-1" role="dialog"
+     aria-labelledby="exampleAddDiscountModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleAddDiscountModalLabel">Mã discount mới</h5>
+            </div>
+            <div class="modal-body">
+                <form th:action="@{/save-discount}" th:object="${discountNew}" method="post">
+                    <div class="form-group">
+                        <label for="name" class="col-form-label">Tên mã khuyến mãi</label>
+                        <input type="text" class="form-control" th:field="*{name}" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="codeDiscount" class="col-form-label">Code mã khuyến mãi</label>
+                        <input type="text" class="form-control" th:field="*{codeDiscount}" id="codeDiscount" name="codeDiscount">
+                    </div>
+                    <div class="form-group">
+                        <label for="valueDiscount" class="col-form-label">Tỉ lệ giảm</label>
+                        <input type="text" class="form-control" th:field="*{valueDiscount}" id="valueDiscount" name="valueDiscount">
+                    </div>
+                    <div class="form-group">
+                        <label for="description" class="col-form-label">Mô tả</label>
+                        <input type="text" class="form-control" th:field="*{description}" id="description" name="description">
+                    </div>
+                    <div class="form-group">
+                        <label for="startDay" class="col-form-label">Ngày bắt đầu</label>
+                        <input type="date" class="form-control" th:field="*{startDay}" id="startDay" name="startDay">
+                    </div>
+                    <div class="form-group">
+                        <label for="endDay" class="col-form-label">Ngày kết thúc</label>
+                        <input type="date" class="form-control" th:field="*{endDay}" id="endDay" name="endDay">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End-->
+
+<!-- Edit Category Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit category</h5>
+            </div>
+            <div class="modal-body">
+                <form th:action="@{/update-discount}" method="PUT">
+                    <div class="form-group">
+                        <label for="idEdit" class="col-form-label">ID
+                        </label> <input type="text" class="form-control" id="idEdit" name="id" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="nameEdit" class="col-form-label">Tên mã khuyến mãi</label>
+                        <input type="text" class="form-control" id="nameEdit" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="codeDiscountEdit" class="col-form-label">Code mã khuyến mãi</label>
+                        <input type="text" class="form-control" id="codeDiscountEdit" name="codeDiscount">
+                    </div>
+                    <div class="form-group">
+                        <label for="valueDiscountEdit" class="col-form-label">Tỉ lệ giảm</label>
+                        <input type="text" class="form-control" id="valueDiscountEdit" name="valueDiscount">
+                    </div>
+                    <div class="form-group">
+                        <label for="descriptionEdit" class="col-form-label">Mô tả</label>
+                        <input type="text" class="form-control" id="descriptionEdit" name="description">
+                    </div>
+                    <div class="form-group">
+                        <label for="startDayEdit" class="col-form-label">Ngày bắt đầu</label>
+                        <input type="date" class="form-control" id="startDayEdit" name="startDay">
+                    </div>
+                    <div class="form-group">
+                        <label for="endDayEdit" class="col-form-label">Ngày kết thúc</label>
+                        <input type="date" class="form-control" id="endDayEdit" name="endDay">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End -->
+
+<!-- Bootstrap core JavaScript-->
+<div th:replace="~{fragments::script}"></div>
+
+<script th:src="@{/js/categories.js}"></script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="~{fragments::header}"></head>
+<body id="page-top">
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!--Sidebar-->
+    <ul th:replace="~{fragments::sideBar}"></ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <nav th:replace="~{fragments::top-navbar}"></nav>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+                <div th:if="${success}" class="text-center alert alert-success">
+                    <p th:text="${success}">
+                    </p>
+                </div>
+                <a th:href="@{/orders-waiting}" class = "btn btn-primary">Chưa duyệt</a> |
+                <a th:href="@{/orders-accept}" class = "btn btn-primary">Đã thanh toán</a> |
+                <a th:href="@{/orders-cancel}" class = "btn btn-primary">Đơn hàng đã hủy</a>
+                <br><br>
+                <div class="table-main table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Chi tiết đơn</th>
+                            <th class="order-date">Ngày đặt</th>
+                            <th class="delivery-date">Ngày giao</th>
+                            <th class="price-pr">Tình trạng</th>
+                            <th class="quantity-box">Số lượng</th>
+                            <th class="total-pr">Tổng tiền</th>
+                            <th class="payment-mth">Phương thức thanh toán</th>
+                            <th>Phí giao hàng</th>
+<!--                            <th>Ghi chú</th>-->
+                            <th>Duyệt đơn</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="order : ${orderList}">
+                                <form th:action="@{/update-order}"  method="post">
+                                    <input type = "hidden" name ="id" th:value = "${order.id}" >
+                                <td class="payment-mth" style="color: black">
+                                    <a style="color: red;" th:href="@{/order-detail/{id}(id = ${order.id})}"><b>Chi tiết..</b></a><br>
+                                </td>
+                                <td class="order-date">
+                                    <span><b>[(${order.orderDate})]</b></span>
+                                </td>
+                                <td class="delivery-date">
+<!--                                    <input type="date" id="deliveryDate" name="deliveryDate"-->
+<!--                                           th:value="${order.deliveryDate}" required>-->
+                                    <span><b>[(${order.deliveryDate})]</b></span>
+                                </td>
+                                <td class="price-pr" th:text="${order.orderStatus}"></td>
+                                <td class="quantity-box" th:text="${order.quantity}"></td>
+                                <td class="total-pr">
+                                    <p style="color: red" th:text="${#numbers.formatInteger(order.totalPrice,3,'POINT')+'Đ'}"></p>
+                                </td>
+                                <td class="payment-mth" style="color: black">
+                                    <span>[(${order.paymentMethod})]</span>
+                                </td>
+                                <td>
+                                    <input type="text" id="shippingFee" name="shippingFee"
+                                           th:value="${order.shippingFee}" required>
+                                </td>
+<!--                                <td class="payment-mth" style="color: black">-->
+<!--                                    <span>[(${order.notes})]</span>-->
+<!--                                </td>-->
+
+                                <td>
+                                    <button style="margin-bottom: 5px;" type="submit" name="action" value="accept" title="accept"
+                                            class="btn btn-primary">
+                                        Accept
+                                    </button>
+                                    <br>
+                                    <button style="margin-bottom: 5px;" type="submit" name="action" value="cancel" title="cancel"
+                                            class="btn btn-danger">
+                                        Cancel
+                                    </button>
+                                    <br>
+                                    <button style="margin-bottom: 5px;" type="submit" name="action" value="delete" title="delete"
+                                            class="btn btn-warning">
+                                        Delete
+                                    </button>
+                                </td>
+                                </form>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                <footer th:replace="~{fragments::footer}"></footer>
+                <!-- End of Footer -->
+
+            </div>
+
+        </div>
+        <!-- End of Main Content -->
+
+    </div>
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a th:replace="~{fragments::scroll}"></a>
+
+<!-- Bootstrap core JavaScript-->
+<div th:replace="~{fragments::script}"></div>
+
+<script th:src="@{/js/categories.js}"></script>
+</body>
+
+</html>

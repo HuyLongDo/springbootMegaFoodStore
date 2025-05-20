@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "https://www.thymeleaf.org/">
+<!-- Basic -->
+
+<head th:replace="~{fragments::head}">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!-- Start Main Top -->
+    <div th:replace="~{fragments::main-top}"></div>
+    <!-- End Main Top -->
+
+
+    <!-- Start Main Top -->
+    <header th:replace="~{fragments::main-header}"></header>
+    <!-- End Main Top -->
+
+    <!-- Start Top Search -->
+    <div th:replace="~{fragments::top-search}"></div>
+    <!-- End Top Search -->
+
+    <!-- Start All Title Box -->
+    <div th:replace="~{fragments::slider}"></div>
+    <!-- End All Title Box -->
+
+    <!-- Start My Account  -->
+    <div class="container">
+        <div class="row my-2">
+            <div class="col-lg-4 order-lg-1 text-center">
+                <img src="images/CakeLogo.jpg" width="200px" height="200px" class="mx-auto img-fluid img-circle d-block"
+                    alt="Profile picture" />
+            </div>
+                <div class="col-lg-8 order-lg-2">
+                    <div class="tab-content py-4">
+                        <div class="tab-pane active" id="profile">
+                            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Your Profile</b></h1>
+                            <table>
+                                <tr>
+                                    <td style="text-align: right;">Tên tài khoản: &nbsp;</td>
+                                    <td> <span th:text="${customer.firstName} + ' ' + ${customer.lastName}" style="font-size: medium;"></span></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right;">Email: &nbsp;</td>
+                                    <td> <span th:text="${customer.username}" style="font-size: medium;"></span></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right;">Số điện thoại: &nbsp;</td>
+                                    <td> <span th:text="${customer.phoneNumber}" style="font-size: medium;"></span> </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right;">Địa chỉ: &nbsp;</td>
+                                    <td> <span th:text="${customer.address}" style="font-size: medium;"></span></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right;">Thành phố: &nbsp;</td>
+                                    <td><span th:text="${customer.cityName}" style="font-size: medium;"></span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="my-account-box-main">
+            <div class="container">
+                <div class="my-account-page">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="account-box">
+                                <div class="service-box">
+                                    <div class="service-icon">
+                                        <a th:href="@{/orders}"> <i class="fa fa-gift"></i> </a>
+                                    </div>
+                                    <div class="service-desc">
+                                        <h4>Đơn hàng của bạn</h4>
+                                        <p>Kiểm tra tùy chỉnh đơn hàng</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="account-box">
+                                <div class="service-box">
+                                    <div class="service-icon">
+                                        <a th:href="@{/account}"><i class="fa fa-lock"></i> </a>
+                                    </div>
+                                    <div class="service-desc">
+                                        <h4>Tài khoản &amp; Bảo mật</h4>
+                                        <p>Tùy chỉnh tài khoản, tên và số điện thoại</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="account-box">
+                                <div class="service-box">
+                                    <div class="service-icon">
+                                        <a th:href="@{/cart}"> <i class="fa fa-location-arrow"></i> </a>
+                                    </div>
+                                    <div class="service-desc">
+                                        <h4>Giỏ hàng của bạn</h4>
+                                        <p>Mua thêm hàng nhận ưu đãi</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End My Account -->
+
+        <!-- Start Feed  -->
+    <div th:replace="~{fragments::feed}"></div>
+        <!-- End Feed  -->
+
+        <!-- Start Footer  -->
+    <footer th:replace="~{fragments::footer}"></footer>
+
+    <div th:replace="~{fragments::backToTop}"></div>
+
+    <!-- ALL JS FILES -->
+    <div th:replace="~{fragments::script}"></div>
+</body>
+
+</html>

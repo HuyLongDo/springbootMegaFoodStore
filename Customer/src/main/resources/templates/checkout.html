@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<!-- Basic -->
+
+<head th:replace="~{fragments::head}">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<!-- Start Main Top -->
+<div th:replace="~{fragments::main-top}">
+</div>
+<!-- End Main Top -->
+
+
+<!-- Start Main Top -->
+<header th:replace="~{fragments::main-header}">
+</header>
+<!-- End Main Top -->
+
+<!-- Start Top Search -->
+<div th:replace="~{fragments::top-search}">
+</div>
+<!-- End Top Search -->
+
+<!-- Start All Title Box -->
+<div th:replace="~{fragments::slider}">
+</div>
+<!-- End All Title Box -->
+
+<!-- Start Cart  -->
+<div class="cart-box-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-lg-6 mb-3">
+                <div class="checkout-address">
+                    <div class="title-left">
+                        <h3>Thông tin địa chỉ</h3>
+                    </div>
+                    <div th:if="${success}" class="text-center alert alert-success">
+                        <p th:text="${success}"></p>
+                    </div>
+                    <div th:if="${error}" class="text-center alert alert-danger">
+                        <p th:text="${error}"></p>
+                    </div>
+                    <form th:action="@{/update-info-customer}" class="needs-validation" novalidate th:object="${customer}">
+
+                        <div th:if="${session.username != null}" class="mb-3">
+                            <label for="username">Mail *</label>
+                            <div class="input-group">
+                                <input  type="text" class="form-control"
+                                       th:field="*{username}" name="username"  id="username" placeholder="" readonly>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="lastName">Tên *</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control"
+                                       th:value="${customer.lastName}" name="lastName" id="lastName" placeholder="" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phoneNumber">Số điện thoại *</label>
+                            <input type="text" class="form-control"
+                                   th:value="${customer.phoneNumber}"
+                                   name="phoneNumber" id="phoneNumber" placeholder="" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="address">Địa chỉ *</label>
+                            <input type="text" class="form-control"
+                                   th:value="${customer.address}"
+                                   id="address" name="address" placeholder="" required>
+                        </div>
+
+                        <div th:if="${session.username != null}" class="mb-3">
+                            <label for="cityName">Thành phố *</label>
+                            <input type="text" class="form-control"
+                                   th:value="${customer.cityName}"
+                                   id="cityName" name="cityName" placeholder="" required>
+                        </div>
+
+                        <button th:if="${customer.username != null}" type="submit" name="action" value="updateMember" title="Update"
+                                class="btn btn-primary update-cart">Cập nhật thông tin
+                        </button>
+
+                        <button th:if="${customer.username == null}" type="submit" name="action" value="updateGuess" title="Update"
+                                class="btn btn-primary update-cart">Xác nhận địa chỉ
+                        </button>
+
+                    </form>
+
+<!--                        <a style="float: right; color: whitesmoke;" -->
+<!--                           th:if="${session.username != null}" th:href="@{/your-profile}"-->
+<!--                           class="btn ml-auto btn hvr-hover">Profile</a>-->
+
+                        <hr class="mb-4">
+                        <div  class="title"><span>Phương thức thanh toán</span></div>
+                        <div class="d-block my-3">
+<!--                            <div class="custom-control custom-radio">-->
+<!--                                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>-->
+<!--                                <label class="custom-control-label" for="credit">Bank card</label>-->
+<!--                            </div>-->
+                            <div class="custom-control custom-radio">
+                                <input id="debit" name="paymentMethod" type="radio" checked class="custom-control-input"
+                                       required>
+                                <label class="custom-control-label" for="debit">Thanh toán trực tiếp</label>
+                            </div>
+                        </div>
+                    <hr class="mb-4">
+                    <form th:action="@{/discount-cart}" method="post">
+                        <div class="coupon-box">
+                            <div class="float-right input-group input-group-sm">
+                                <input class="form-control" name="codeDiscount" placeholder="Nhập voucher" aria-label="Coupon code" type="text">
+                                <div class="float-right input-group-append">
+                                    <button class="btn btn-theme" type="submit">Áp Mã Voucher</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <hr class="mb-1">
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-6 mb-3">
+                <form th:action="@{/add-order}" method="post" th:object="${shoppingCart}">
+                    <input type="hidden" name="id" th:value="${id}">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="odr-box">
+                            <div class="title-left">
+                                <h3>Giỏ Sản Phẩm</h3>
+                            </div>
+                            <div class="rounded p-2 bg-light">
+                                <div class="media mb-2 border-bottom" th:each="item : ${shoppingCart.getCartItems()}">
+                                    <div class="media-body"><a href="product-detail.html"
+                                                               th:text="${item.product.name}"></a>
+                                        <div class="small text-muted">Đơn giá: [(${item.product.costPrice})] <span
+                                                class="mx-2">|</span> Số lượng: [(${item.quantity})]
+                                            <span class="mx-2">|</span> Tổng giá: [(${item.unitPrice * item.quantity})]Đ
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-md-12 col-lg-12">
+                        <div class="order-box">
+                            <div class="title-left">
+                                <h2><b>Đơn hàng của bạn</b></h2>
+                            </div>
+                            <div class="d-flex">
+                                <div class="font-weight-bold">Sản phẩm</div>
+                                <div class="ml-auto font-weight-bold">Chi tiết giá tiền </div>
+                            </div>
+                            <hr class="my-1">
+                            <div class="d-flex">
+                                <h4>Tổng giá sản phẩm</h4>
+                                <div class="ml-auto font-weight-bold"
+                                     th:text="${session.totalPrice != null} ? ${#numbers.formatInteger(session.totalPrice,3,'POINT')+' Đ'} : ${#numbers.formatInteger(shoppingCart.totalPrice,3,'POINT')+' Đ'}"></div>
+                            </div>
+                            <hr class="my-1">
+                            <div class="d-flex">
+                                <h4>Phí phụ thu</h4>
+                                <div class="ml-auto font-weight-bold"> 0Đ</div>
+                            </div>
+
+                            <div th:if="${session.usedDiscount != null}" class="d-flex">
+                                <h4>Voucher sử dụng </h4>
+                                <div class="ml-auto font-weight-bold" th:text="${'Giảm - ' + session.usedDiscount.valueDiscount +'%'}"></div>
+                            </div>
+
+                            <div class="d-flex">
+                                <h4>Giao hàng</h4>
+                                <div class="ml-auto font-weight-bold"> Chờ xác thực đơn hàng</div>
+                            </div>
+                            <hr>
+                            <div class="d-flex gr-total">
+                                <h5>Thanh toán</h5>
+                                <div class="ml-auto h5"
+                                     th:text="${session.totalPrice != null} ? ${#numbers.formatInteger(session.totalPrice,3,'POINT')+ ' VND'} : ${#numbers.formatInteger(shoppingCart.totalPrice,3,'POINT')+ ' VNĐ'}"></div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+
+                    <div class="col-12 d-flex shopping-box">
+                            <button style="color: whitesmoke;" type="submit" class="ml-auto btn hvr-hover">Đặt hàng</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Cart -->
+
+<!-- Start Feed  -->
+<div th:replace="~{fragments::feed}">
+</div>
+
+<!-- End Feed  -->
+
+
+<!-- Start Footer  -->
+<footer th:replace="~{fragments::footer}"></footer>
+
+<div th:replace="~{fragments::backToTop}"></div>
+
+<div th:replace="~{fragments::script}"></div>
+</body>
+
+</html>
